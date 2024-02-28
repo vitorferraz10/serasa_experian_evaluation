@@ -1,12 +1,14 @@
-'use client'
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+"use client";
+import { Roboto } from "next/font/google";
 import StyledComponentsRegistry from "lib/registry";
 import { ThemeProvider } from "styled-components";
-import tokens from "ds-serasa";
+import { theme } from "../styles/theme";
+import GlobalStyle from "styles/globalStyle";
 
-const inter = Inter({ subsets: ["latin"] });
+const roboto = Roboto({
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export default function RootLayout({
   children,
@@ -15,9 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={roboto.className}>
         <StyledComponentsRegistry>
-          <ThemeProvider theme={tokens}>{children}</ThemeProvider>
+        <GlobalStyle />
+          <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </StyledComponentsRegistry>
       </body>
     </html>
