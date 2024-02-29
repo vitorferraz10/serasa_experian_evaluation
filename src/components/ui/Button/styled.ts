@@ -14,7 +14,7 @@ export const Button = styled.button<{ size?: "large" | "medium" | "small" }>`
   font-weight: ${({theme}) => theme.font.weight.bold};
   transition: 0.4s;
 
-  &:hover {
+  &:hover, &:focus {
     filter: brightness(0.9);
   
   }
