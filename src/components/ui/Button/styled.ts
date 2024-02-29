@@ -16,6 +16,8 @@ export const Button = styled.button<{ size?: "large" | "medium" | "small" }>`
 
   &:hover, &:focus {
     filter: brightness(0.9);
-  
+  }
+  &:disabled {
+    cursor: not-allowed;
   }
 `;

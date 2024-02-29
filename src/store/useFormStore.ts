@@ -1,6 +1,6 @@
-import { FormEvent } from 'react';
-import { postData } from 'services/api';
-import { create } from 'zustand';
+import { FormEvent } from "react";
+import { postData } from "services/api";
+import { create } from "zustand";
 
 type FormState = {
   isLoading: boolean;
@@ -24,13 +24,16 @@ export const useFormStore = create<FormState>((set) => ({
   setDescription: (description) => set({ description }),
   setNumberStar: (numberStar) => set({ numberStar }),
   sendForm: async (e) => {
-    e.preventDefault()
+    e.preventDefault();
     set({ isLoading: true });
     const { name, description, numberStar } = await useFormStore.getState();
     setTimeout(async () => {
       try {
         await postData({ name, description, stars: numberStar });
         set({ isSuccess: true });
+        set({ name: "" });
+        set({ description: "" });
+        set({ numberStar: 0 });
       } catch (error) {
         console.error("Error sending form:", error);
       } finally {
@@ -40,4 +43,4 @@ export const useFormStore = create<FormState>((set) => ({
   },
 }));
 
-export default useFormStore
+export default useFormStore;

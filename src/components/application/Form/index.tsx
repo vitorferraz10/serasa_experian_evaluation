@@ -6,7 +6,7 @@ import useFormStore from "store/useFormStore";
 
 const FormEvaluation = () => {
   const inputRef = useRef<HTMLInputElement>(null);
-  const { name, description, sendForm, setDescription, setName } = useFormStore();
+  const { name, description, numberStar, sendForm, setDescription, setName } = useFormStore();
   return (
     <S.Form onSubmit={sendForm}>
       <TextField
@@ -21,7 +21,7 @@ const FormEvaluation = () => {
         onChange={(e) => setDescription(e.target.value)}
         value={description}
       />
-      <ButtonForm textContent="Enviar avaliação" size="large" />
+      <ButtonForm textContent="Enviar avaliação" size="large" disabled={!name || !numberStar}/>
     </S.Form>
   );
 };
