@@ -18,7 +18,7 @@ export const StarRating = ({ totalStars = 5 }: StarRatingProps) => {
         <S.Star
           key={index}
           onClick={() => handleStarClick(index)}
-          colorstar={index < selectedStars ? 'gold' : 'gray' }
+          color={index < selectedStars ? 'gold' : 'gray' }
           data-testid={`star-${index + 1}`}
         >
           ★

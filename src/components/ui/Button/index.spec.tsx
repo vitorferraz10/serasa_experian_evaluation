@@ -1,6 +1,6 @@
 
 import { wrapperRender } from "test/render";
-import {ButtonForm} from ".";
+import { ButtonForm } from ".";
 import { fireEvent } from "@testing-library/react";
 
 describe('<ButtonForm />', () => {
@@ -48,4 +48,5 @@ describe('<ButtonForm />', () => {
 
       expect(handleClickMock).not.toHaveBeenCalled();
     });
+
 })
