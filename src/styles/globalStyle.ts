@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   body,
@@ -27,6 +28,7 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+  
 
   ul,
   ol {

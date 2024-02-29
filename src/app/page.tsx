@@ -1,8 +1,11 @@
 "use client";
 
-import FormEvaluation from "@/components/Form";
+import TemplateHome from "templates/Home";
 
 export default function Home() {
-  return <FormEvaluation />;
-
+  return (
+    <>
+      <TemplateHome />
+    </>
+  );
 }

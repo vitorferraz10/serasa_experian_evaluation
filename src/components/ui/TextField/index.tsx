@@ -1,4 +1,5 @@
 import { ChangeEvent, RefObject } from "react";
+import * as S from './styled'
 
 type TextFieldProps = {
   placeholder: string;
@@ -14,7 +15,7 @@ export const TextField = ({
   value,
 }: TextFieldProps) => {
   return (
-    <input
+    <S.InputTextField
       type="text"
       onChange={onChange}
       placeholder={placeholder}
