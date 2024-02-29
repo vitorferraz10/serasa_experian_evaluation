@@ -4,7 +4,7 @@ export const InputTextField = styled.input`
   height: 40px;
   width: 300px;
   padding: 12px;
-  font-family: ${({ theme }) => theme.font.family};
+  font-family: ${({ theme }) => theme.font.family.body};
   font-size: 0.875rem;
   font-weight: 500;
   line-height: 1.5;
