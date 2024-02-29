@@ -1,7 +1,8 @@
 "use client";
-import Button from "@/components/Button";
+
+import FormEvaluation from "@/components/Form";
 
 export default function Home() {
-  return <Button />;
-  
+  return <FormEvaluation />;
+
 }
