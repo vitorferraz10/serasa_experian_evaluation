@@ -7,8 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "jest --watch --coverage",
-    "test:ci": "jest --ci"
+    "lint:fix": "next lint --fix", 
+    "test": "jest"
   },
   "dependencies": {
     "ds-serasa": "^1.0.1",
