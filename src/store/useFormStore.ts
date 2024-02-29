@@ -1,6 +1,6 @@
 import { FormEvent } from 'react';
-import { postData } from 'service/api';
-import { create, createStore } from 'zustand';
+import { postData } from 'services/api';
+import { create } from 'zustand';
 
 type FormState = {
   isLoading: boolean;

@@ -7,7 +7,7 @@ const customJestConfig = {
     '^test/(.*)$': '<rootDir>/src/test/$1', 
     '^styles/(.*)$': '<rootDir>/src/styles/$1', 
     '^store/(.*)$': '<rootDir>/src/store/$1',
-    '^service/(.*)$': '<rootDir>/src/service/$1',
+    '^services/(.*)$': '<rootDir>/src/services/$1',
   },
   setupFilesAfterEnv: ['<rootDir>/src/test/jest.setup.ts'],
   coveragePathIgnorePatterns: [
